@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import StartScreen from "./components/start-screen/start-screen";
+import {useState} from "react";
+import Gameplay from "./components/gameplay/gameplay";
 
 function App() {
+
+    const [activeScreen, setActiveScreen] = useState('start');
+
+    const viewScreen = () => {
+        switch (activeScreen) {
+            case 'start':
+                return <StartScreen setActiveScreen={setActiveScreen}/>
+            case 'gameplay':
+                return <Gameplay/>
+        }
+    }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {viewScreen()}
     </div>
   );
 }
