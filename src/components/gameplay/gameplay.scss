@@ -15,56 +15,8 @@
     z-index: 20;
     color: #3d2700;
   }
-  &__umbrella-one {
+  &__umbrella {
     position: absolute;
-    width: 80px;
-    height: 160px;
-    top: 300px;
-    left: 1125px;
-    transition: 1s ease-out;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  &__umbrella-two {
-    position: absolute;
-    width: 80px;
-    height: 160px;
-    top: 400px;
-    left: 870px;
-    transition: 1s ease-out;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  &__umbrella-three {
-    position: absolute;
-    width: 200px;
-    height: 72px;
-    top: 660px;
-    left: 720px;
-    transition: 1s ease-out;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  &__umbrella-four {
-    position: absolute;
-    width: 100px;
-    height: 286px;
-    top: 360px;
-    left: 980px;
-    transition: 1s ease-out;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  &__umbrella-five {
-    position: absolute;
-    width: 170px;
-    height: 287px;
-    top: 566px;
-    left: 870px;
     transition: 1s ease-out;
     &:hover {
       cursor: pointer;
