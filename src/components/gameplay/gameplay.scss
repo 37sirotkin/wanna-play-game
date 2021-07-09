@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
 .gameplay {
+  position: relative;
   &__background {
     width: 480px;
     height: 853px;
@@ -11,11 +12,11 @@
     position: absolute;
     font-size: 34px;
     top: 45px;
-    left: 970px;
+    left: 245px;
     z-index: 20;
     color: #3d2700;
   }
-  &__umbrella {
+  &__object {
     position: absolute;
     transition: 1s ease-out;
     &:hover {
@@ -28,7 +29,7 @@
     width: 400px;
     height: 132px;
     top: 600px;
-    left: 750px;
+    left: 45px;
     visibility: hidden;
     transition: 1s ease-out;
     &:hover {
@@ -37,18 +38,18 @@
   }
 }
 
-.delete {
-  visibility: hidden;
+.found-object {
+  display: hidden;
   opacity: 0;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0 !important;
+  right: 0 !important;
 
 }
 
-.viewButton {
+.continue-button {
   visibility: visible;
   opacity: 1;
   top: 700px;
-  left: 750px;
+  left: 45px;
 }

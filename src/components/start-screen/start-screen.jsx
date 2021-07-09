@@ -1,8 +1,8 @@
-import React from 'react'
-import './start-screen.scss'
-import startBackground from '../../assetes/g1.jpg'
+import React from 'react';
+import './start-screen.scss';
+import startBackground from '../../assets/g1.jpg';
 import useSound from "use-sound";
-import click from '../../sounds/click.mp3'
+import click from '../../sounds/click.mp3';
 
 const StartScreen = ({setActiveScreen}) => {
 
