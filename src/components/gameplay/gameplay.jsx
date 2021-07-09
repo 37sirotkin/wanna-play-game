@@ -1,10 +1,9 @@
 import React, {useState} from "react";
 import './gameplay.scss';
-import continueButton from '../../assets/knopka.png';
 import useSound from "use-sound";
 import click from "../../sounds/click.mp3";
 
-const Gameplay = ({config}) => {
+const Gameplay = ({config, setActiveScreen}) => {
 
     const [score, setScore] = useState(0);
 
@@ -24,12 +23,21 @@ const Gameplay = ({config}) => {
         }
     }
 
+    const returnStartScreen = () => {
+        setActiveScreen('start')
+    }
+
     const mapAllObjects = () => {
         return allObjects.map(u => <img onClick={(e) => addScore(e.target)}
-                                   className='gameplay__object'
-                                   src={u.url}
-                                   alt='object-icon'
-                                   style={{top: u.top + 'px', left: u.left + 'px', width: u.width + 'px', height: u.height + 'px'}}/>)
+                                        className='gameplay__object'
+                                        src={u.url}
+                                        alt='object-icon'
+                                        style={{
+                                            top: u.top + 'px',
+                                            left: u.left + 'px',
+                                            width: u.width + 'px',
+                                            height: u.height + 'px'
+                                        }}/>)
     }
     return (
         <div className='gameplay'>
@@ -38,7 +46,7 @@ const Gameplay = ({config}) => {
             {
                 mapAllObjects()
             }
-            <img className={'gameplay__button ' + viewButton()} src={continueButton} alt='continue-button'/>
+            <img onClick={() => returnStartScreen()} className={'gameplay__button ' + viewButton()} src='/assets/knopka.png' alt='continue-button'/>
         </div>
     )
 }

@@ -2,11 +2,13 @@
 
 .gameplay {
   position: relative;
+
   &__background {
     width: 480px;
     height: 853px;
     z-index: -10;
   }
+
   &__counter {
     font-family: 'Nunito Sans', sans-serif;
     position: absolute;
@@ -16,13 +18,16 @@
     z-index: 20;
     color: #3d2700;
   }
+
   &__object {
     position: absolute;
     transition: 1s ease-out;
+
     &:hover {
       cursor: pointer;
     }
   }
+
   &__button {
     opacity: 0;
     position: absolute;
@@ -32,6 +37,7 @@
     left: 45px;
     visibility: hidden;
     transition: 1s ease-out;
+
     &:hover {
       cursor: pointer;
     }
@@ -39,7 +45,7 @@
 }
 
 .found-object {
-  display: hidden;
+  visibility: hidden;
   opacity: 0;
   position: absolute;
   top: 0 !important;

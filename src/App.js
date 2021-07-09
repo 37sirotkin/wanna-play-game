@@ -12,14 +12,14 @@ function App() {
             case 'start':
                 return <StartScreen setActiveScreen={setActiveScreen}/>
             case 'gameplay':
-                return <Gameplay config={config} />
+                return <Gameplay setActiveScreen={setActiveScreen} config={config}/>
         }
     }
-  return (
-    <div className="App">
-        {viewScreen()}
-    </div>
-  );
+    return (
+        <div className="App">
+            {viewScreen()}
+        </div>
+    );
 }
 
 export default App;
